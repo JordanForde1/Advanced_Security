@@ -1,0 +1,167 @@
+Delivered-To: c14403588@mydit.ie
+Received: by 10.140.36.178 with SMTP id p47csp3056426qgp;
+        Thu, 16 Nov 2017 04:25:38 -0800 (PST)
+X-Received: by 10.80.217.15 with SMTP id t15mr2538598edj.217.1510835138630;
+        Thu, 16 Nov 2017 04:25:38 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1510835138; cv=none;
+        d=google.com; s=arc-20160816;
+        b=pqsm/KSXJrPLvbSe3lwShVv+eHD9w3dadhWRVl9cDeK7V4zY5yXuCWc0p0cEICKFAZ
+         lhG/fTBXlR/ghDk788Q9TN5LWLlCoo956hWE4PBspCg7xAVr8BD3M83ZT2uvSogdSal4
+         ei9FrsSU+zbKq6WkNic497eqMXhKWIagL5776JAyfo+PVid54NLbe3+se7zN38ibyZyg
+         LAgQBkVp55N1zL5SIXlaFORyHANJCsRFncWyNFf6xTepF3sQLeMpXVqiyrzJG05ToJLb
+         ZVosIgotHptRH1lOoEya64P6qo0Y5pXjqZDs0dD4y2/y+bVLch9Yay+EdZGxa/WQV03W
+         T1IA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:user-agent:date:message-id:subject:from:to
+         :dkim-signature:arc-authentication-results;
+        bh=iBd7Wc22bx4Dr/AZBkJw6qS8f6rV97tnPB+NjUN0qIM=;
+        b=DUiuGYhjDS9h1FFwSNVBZVg24R7omK+s0XuvqlzL650yymNmcuwoAkXidqbZ7beHZH
+         QMpv8qaF7oC7hPqeu9gq1u8oB8SFHHds7UYD9N+YfbOPyQvSmimOBQDmSA5yB6r+PzN+
+         0qt8cy3ZFycUybyN1s04MIaR4HSgAM5SgywbrBD8FAKo2sMkBY2nEaIPPEEPpHCo587I
+         q4eyLAA+9XsdVBZ0t8+K3N+5IZ0QXbz+k0AFjCug0b8Vd9GI3kmzcdpQC7PK1sQJULoP
+         me45flgi4FVt7C/WWtrlJ99HCJ0PnSRZWIF3s/3d+kpxibRS3ePxZVEOPmqHqsRwvqB+
+         6dQw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mydit-ie.20150623.gappssmtp.com header.s=20150623 header.b=X21I+3UK;
+       spf=neutral (google.com: 147.252.136.115 is neither permitted nor denied by best guess record for domain of c14454828@mydit.ie) smtp.mailfrom=c14454828@mydit.ie
+Return-Path: <c14454828@mydit.ie>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id x12sor812397edi.45.2017.11.16.04.25.38
+        for <c14403588@mydit.ie>
+        (Google Transport Security);
+        Thu, 16 Nov 2017 04:25:38 -0800 (PST)
+Received-SPF: neutral (google.com: 147.252.136.115 is neither permitted nor denied by best guess record for domain of c14454828@mydit.ie) client-ip=147.252.136.115;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mydit-ie.20150623.gappssmtp.com header.s=20150623 header.b=X21I+3UK;
+       spf=neutral (google.com: 147.252.136.115 is neither permitted nor denied by best guess record for domain of c14454828@mydit.ie) smtp.mailfrom=c14454828@mydit.ie
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=mydit-ie.20150623.gappssmtp.com; s=20150623;
+        h=to:from:subject:message-id:date:user-agent:mime-version;
+        bh=7p88u0tGbaLipuj26XpHBj6aikeS7IbOZkeBrWwzjVs=;
+        b=X21I+3UKShMBUmU2JcKCqWdVkGcIinik8kETjvANnPxqp3hUz4VNYXli0WKfAK+Q9b
+         k8yole6A252DVQfDAUMJaU+e9oUE5rEov41fL14vSd3RwdckNWuPx70FJiuRbQS4a2Ti
+         pA9Dma0nwZ/gyfGh0am09mCInR1C+oItabKVBbDs0nJhOMhJASZtvTfFw9SpsVEjDKAT
+         mGHnOF3+X+eRR9A8sNfyAB45dKx3/avJw5AbHb1jBxTYHH7GKHaywl8F1jZ0m73h3CLc
+         ud5QDxtnS41Gv1uRhNPwf1QnPWQ6k4dM370eoAqUytEsCa8ReUC43g8eyuzS4KzjeVBc
+         yldg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:to:from:subject:message-id:date:user-agent
+         :mime-version;
+        bh=7p88u0tGbaLipuj26XpHBj6aikeS7IbOZkeBrWwzjVs=;
+        b=VcTB3Dph760fU2rmDPDhzf4LFqaodHjqSkiH0SfiDMkRV2hAmqsPwpsHRlNc4VlG1e
+         PsoEE5JJxMOC5pQynt1C8ALFz+HFEoO0c3/6EsOPjtPLbZQ8wU48OdDxOIFK2PQPb8ji
+         nNh6tjGMJ5LjD1qXyqw+bPCeFhTe9dk6xTbqo/kHjzgx9Pna7q562nGUz4lHBPUMRnCL
+         aVgMYwrsHBNNXZw4KUJyUY6Hqwp3MUAimTZj/2BQN51y4Ae3ls4QvKrgMqUgYx/vOKBZ
+         fj9Ey/Y9hyoYa1CCEJu+9tvWSOPg+eC4rISUzBHycKnbxAtOpbzWd1VrxZFBJf5pMrCT
+         5RVg==
+X-Gm-Message-State: AJaThX4uL7LtYUsvac4qAf2qHP0vm2o8rJYSrQMIDypJy5ZpVT/OUF8Q
+	HVvXNMdJtRi1ShgsvdtI3qyupKypQwet0n0EbL7WkmQdk7fbIiIGNJ4S/c4HPljq6rg32pNgEpR
+	D9UuGQACmJI0U
+X-Google-Smtp-Source: AGs4zMY+ZpcDP5954KwP1IkOuEPcwW1tYK3H7LeGR+qZJED4cxBYsYsK2rxhMuMDSHvMCLqIe3BzAw==
+X-Received: by 10.80.213.200 with SMTP id g8mr2453865edj.277.1510835138066;
+        Thu, 16 Nov 2017 04:25:38 -0800 (PST)
+Return-Path: <c14454828@mydit.ie>
+Received: from [147.252.136.115] ([147.252.136.115])
+        by smtp.gmail.com with ESMTPSA id w7sm1032105edw.65.2017.11.16.04.25.37
+        for <c14403588@mydit.ie>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 16 Nov 2017 04:25:37 -0800 (PST)
+To: c14403588@mydit.ie
+From: Cillian McCabe <c14454828@mydit.ie>
+Subject: test
+Message-ID: <cab11098-2aa1-7496-67c2-218eb5803ff0@mydit.ie>
+Date: Thu, 16 Nov 2017 12:25:36 +0000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101
+ Thunderbird/52.4.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="f403045dbe86ba9c41055e18b7f9"
+
+--f403045dbe86ba9c41055e18b7f9
+Content-Type: text/plain; charset="UTF-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+--=20
+
+
+This email originated from DIT. If you received this email in error, please=
+=20
+delete it from your system. Please note that if you are not the named=20
+addressee, disclosing, copying, distributing or taking any action based on=
+=20
+the contents of this email or attachments is prohibited. www.dit.ie
+
+Is =C3=B3 ITB=C3=81C a th=C3=A1inig an r=C3=ADomhphost seo. M=C3=A1 fuair t=
+=C3=BA an r=C3=ADomhphost seo tr=C3=AD=20
+earr=C3=A1id, scrios de do ch=C3=B3ras =C3=A9 le do thoil. Tabhair ar aird,=
+ mura t=C3=BA an=20
+seola=C3=AD ainmnithe, go bhfuil dianchosc ar aon nochtadh, aon ch=C3=B3ipe=
+=C3=A1il, aon=20
+d=C3=A1ileadh n=C3=B3 ar aon ghn=C3=ADomh a dh=C3=A9anfar bunaithe ar an =
+=C3=A1bhar at=C3=A1 sa=20
+r=C3=ADomhphost n=C3=B3 sna hiat=C3=A1in seo. www.dit.ie
+
+T=C3=A1 ITB=C3=81C ag aistri=C3=BA go Gr=C3=A1inseach Ghorm=C3=A1in =E2=80=
+=93 DIT is on the move to=20
+Grangegorman <http://www.dit.ie/grangegorman>
+
+--f403045dbe86ba9c41055e18b7f9
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="fJ25Rb6gnVxpeMVAWSCHFdShbEkXPoOkX"
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--fJ25Rb6gnVxpeMVAWSCHFdShbEkXPoOkX
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--fJ25Rb6gnVxpeMVAWSCHFdShbEkXPoOkX
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+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
+Hn/W/BW5zN/FzZvGDdFMFGgHEmsgKt5TZA==
+=d6DN
+-----END PGP MESSAGE-----
+
+--fJ25Rb6gnVxpeMVAWSCHFdShbEkXPoOkX--
+
+--f403045dbe86ba9c41055e18b7f9--
